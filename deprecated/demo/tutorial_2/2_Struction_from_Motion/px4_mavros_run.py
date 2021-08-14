@@ -71,7 +71,7 @@ class Px4Controller:
                 time.sleep(0.5)
         self.cur_target_pose = self.construct_target(0, 0, self.takeoff_height, self.current_heading)
 
-        #print ("self.cur_target_pose:", self.cur_target_pose, type(self.cur_target_pose))
+        print ("self.cur_target_pose:", self.cur_target_pose, type(self.cur_target_pose))
 
         for i in range(10):
             self.local_target_pub.publish(self.cur_target_pose)
@@ -306,4 +306,3 @@ class Px4Controller:
 if __name__ == '__main__':
     con = Px4Controller()
     con.start()
-
